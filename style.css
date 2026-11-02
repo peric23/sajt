@@ -16,11 +16,9 @@ nav a:hover{color:var(--ink)}
 #lang{font:800 .8rem Manrope,sans-serif;color:var(--cyan);background:none;border:1px solid var(--cyan);border-radius:4px;padding:.3rem .7rem;cursor:pointer}
 #lang:hover{background:var(--cyan);color:var(--bg)}
 .hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 1.2rem}
-.logo{width:min(220px,48vw);height:auto;filter:drop-shadow(0 0 28px rgba(76,201,255,.6));animation:glow 4s ease-in-out infinite alternate}
-@keyframes glow{to{filter:drop-shadow(0 0 48px rgba(76,201,255,.95))}}
-h1{font:clamp(2rem,7vw,4.2rem)/1.1 Michroma,sans-serif;margin:1.4rem 0 .6rem;letter-spacing:.02em}
-h1 span{display:block;font-size:.34em;letter-spacing:.5em;margin-top:.9rem;color:var(--mute)}
-.lead{max-width:36em;color:var(--mute);font-size:1.15rem;margin:1rem 0 2rem}
+.banner{width:min(100%,960px);height:auto;-webkit-mask:radial-gradient(ellipse 62% 62% at 50% 50%,#000 55%,transparent 100%);mask:radial-gradient(ellipse 62% 62% at 50% 50%,#000 55%,transparent 100%)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.lead{max-width:36em;color:var(--mute);font-size:1.15rem;margin:0 0 2rem}
 .cta{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
 .btn{padding:.8rem 1.6rem;border-radius:4px;background:var(--blue);color:#fff;font-weight:800;text-decoration:none;box-shadow:0 0 24px rgba(31,107,255,.5)}
 .btn:hover{background:#3b82ff}
@@ -45,4 +43,4 @@ dd{margin:0;color:var(--mute)}
 .contact a{font-size:1.3rem;font-weight:800}
 footer{text-align:center;padding:2rem 1rem 3rem;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
 @media(max-width:760px){.grid,.about{grid-template-columns:1fr}.stack div{grid-template-columns:1fr;gap:.2rem}nav a{display:none}}
-@media(prefers-reduced-motion:reduce){.logo{animation:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
