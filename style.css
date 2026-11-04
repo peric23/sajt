@@ -1,0 +1,48 @@
+:root{color-scheme:dark;--bg:#08193b;--bg2:#08183a;--blue:#1f6bff;--cyan:#4cc9ff;--ink:#e8f1ff;--mute:#9db4d6;--line:rgba(76,201,255,.25)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font:400 1.0625rem/1.65 Manrope,system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,#0c2354,#08193b 50%,#061330)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+background:radial-gradient(60% 50% at 50% 28%,rgba(31,107,255,.45),transparent 70%),url(assets/bg-network.svg) center top/640px,
+repeating-linear-gradient(90deg,rgba(76,201,255,.10) 0 2px,transparent 2px 56px);
+-webkit-mask:linear-gradient(90deg,#000,transparent 28%,transparent 72%,#000);mask:linear-gradient(90deg,#000,transparent 28%,transparent 72%,#000)}
+/* Optional: put a data-center photo at assets/bg.jpg and it appears faintly behind the site */
+body::after{content:"";position:fixed;inset:0;z-index:-2;background:url(assets/bg.jpg) center/cover;opacity:.18;pointer-events:none}
+a{color:var(--cyan)}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.top{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem clamp(1rem,4vw,2.5rem);background:rgba(3,11,28,.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand{font:.9rem Michroma,sans-serif;color:var(--ink);text-decoration:none;white-space:nowrap}
+nav{display:flex;align-items:center;gap:1.3rem;flex-wrap:wrap}
+nav a{color:var(--mute);text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+#lang{font:800 .8rem Manrope,sans-serif;color:var(--cyan);background:none;border:1px solid var(--cyan);border-radius:4px;padding:.3rem .7rem;cursor:pointer}
+#lang:hover{background:var(--cyan);color:var(--bg)}
+.hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 1.2rem}
+.banner{width:min(100%,960px);height:auto;-webkit-mask:radial-gradient(ellipse 62% 62% at 50% 50%,#000 55%,transparent 100%);mask:radial-gradient(ellipse 62% 62% at 50% 50%,#000 55%,transparent 100%)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.lead{max-width:36em;color:var(--mute);font-size:1.15rem;margin:0 0 2rem}
+.cta{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{padding:.8rem 1.6rem;border-radius:4px;background:var(--blue);color:#fff;font-weight:800;text-decoration:none;box-shadow:0 0 24px rgba(31,107,255,.5)}
+.btn:hover{background:#3b82ff}
+.btn.ghost{background:none;border:1px solid var(--cyan);color:var(--cyan);box-shadow:none}
+.wrap{max-width:1040px;margin:0 auto;padding:4.5rem clamp(1rem,4vw,2rem)}
+h2{font:clamp(1.4rem,3.5vw,2rem)/1.2 Michroma,sans-serif;margin:0 0 2rem}
+h3{margin:0 0 .5rem;font-size:1.2rem}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+article{padding:1.4rem 1.5rem;background:linear-gradient(135deg,rgba(31,107,255,.16),rgba(8,24,58,.4));border-left:3px solid var(--cyan);border-radius:0 6px 6px 0}
+article p{margin:0;color:var(--mute)}
+.stack div{display:grid;grid-template-columns:minmax(10rem,14rem) 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+dt{font-weight:800}
+dd{margin:0;color:var(--mute)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:start}
+.about p{max-width:60ch;color:var(--mute)}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
+.facts li{padding:.9rem 1.1rem;border:1px solid var(--line);border-radius:6px;background:rgba(8,24,58,.6);display:flex;align-items:baseline;gap:.8rem}
+.facts b{font:1.15rem Michroma,sans-serif;color:var(--cyan)}
+.facts span{color:var(--mute)}
+.contact{text-align:center}
+.contact p{margin:.4rem 0;color:var(--mute)}
+.contact a{font-size:1.3rem;font-weight:800}
+footer{text-align:center;padding:2rem 1rem 3rem;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
+@media(max-width:760px){.grid,.about{grid-template-columns:1fr}.stack div{grid-template-columns:1fr;gap:.2rem}.top{flex-wrap:wrap;padding:.6rem 1rem}nav{width:100%;overflow-x:auto;flex-wrap:nowrap;gap:1rem}nav a{white-space:nowrap;font-size:.85rem}#lang{margin-left:auto}html{scroll-padding-top:100px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
